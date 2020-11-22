@@ -11,3 +11,9 @@ Just type:
 ```
 ./<path_to_react_ts_project_script_folder>/start-react-ts-project.sh <path/to/project/folder/project_name>
 ```
+
+To include redux and redux files:
+```
+./<path_to_react_ts_project_script_folder>/start-react-ts-project.sh <path/to/project/folder/project_name> --redux
+```
+

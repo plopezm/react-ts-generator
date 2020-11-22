@@ -47,3 +47,20 @@ echo "${blue}Adding scripts to package.json...${reset}"
 cat $PROJECT_DIR/package.json | jq '.scripts += {"dev": "webpack-dev-server --mode development --open --hot","build": "webpack --mode production"}' | tee $PROJECT_DIR/package.json
 echo "${green}OK${reset}"
 
+if [ -z "$2" ]; then
+	exit 0
+fi
+
+arguments=( "$@" )
+# Checking other arguments
+for arg in "${arguments[@]}"; do
+   if [ "$arg" == "--redux" ]; then
+		# Installing redux files
+		echo "${blue}Installing redux...${reset}"
+		npm i redux react-redux @types/react-redux
+		npm i redux-thunk
+		cp -r $DIR/plugins/redux/* $PROJECT_DIR/src/
+		echo "${green}OK${reset}"
+   fi
+done
+
