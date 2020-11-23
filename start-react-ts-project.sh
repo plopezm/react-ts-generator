@@ -57,8 +57,8 @@ for arg in "${arguments[@]}"; do
    if [ "$arg" == "--redux" ]; then
 		# Installing redux files
 		echo "${blue}Installing redux...${reset}"
-		npm i redux react-redux @types/react-redux
-		npm i redux-thunk
+		npm i redux react-redux redux-thunk 
+		npm i @types/react-redux --save-dev
 		cp -r $DIR/plugins/redux/* $PROJECT_DIR/src/
 		echo "${green}OK${reset}"
    fi
