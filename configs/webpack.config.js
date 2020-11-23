@@ -27,7 +27,7 @@ module.exports = {
           loader: 'babel-loader'
         },
       },
-
+			{ test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader' },
       // css-loader to bundle all the css files into one file and style-loader to add all the styles  inside the style tag of the document
       {
         test: /\.css$/,

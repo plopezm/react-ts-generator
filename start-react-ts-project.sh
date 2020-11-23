@@ -25,7 +25,7 @@ echo "${blue}Installing development dependencies...${reset}"
 npm install webpack webpack-cli@3 --save-dev
 npm install typescript --save-dev
 npm install @babel/core babel-loader @babel/preset-react @babel/preset-typescript @babel/preset-env @babel/plugin-proposal-class-properties @babel/plugin-proposal-object-rest-spread --save-dev
-npm install css-loader style-loader --save-dev
+npm install css-loader style-loader url-loader --save-dev
 npm install html-webpack-plugin --save-dev
 npm install webpack-dev-server --save-dev
 echo "${green}OK${reset}"
